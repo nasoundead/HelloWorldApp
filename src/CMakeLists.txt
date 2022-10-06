@@ -5,13 +5,13 @@ AUX_SOURCE_DIRECTORY(. DIR_SOURCE)
 # add the executable
 ADD_EXECUTABLE(${PROJECT_NAME} ${DIR_SOURCE})
 
+add_subdirectory(hello-world)
+
 #添加动态连接库的路径
-link_directories(${PROJECT_SOURCE_DIR}/lib) 
-#添加libmxnet.so
-# target_link_libraries(${APP_NAME} -lmxnet ) 
+link_directories(${CMAKE_SOURCE_DIR}/library) 
+
+target_include_directories(${PROJECT_NAME} PRIVATE hello-world)
+target_link_libraries(${PROJECT_NAME} helloworld ) 
+
 target_link_libraries(${PROJECT_NAME} -lm ) 
 
-# 添加静态库libm.a
-# add_library(m STATIC IMPORTED)
-# set_property(TARGET m PROPERTY IMPORTED_LOCATION /usr/i686-w64-mingw32/lib/libm.a)
-# target_link_libraries(${APP_NAME} m )

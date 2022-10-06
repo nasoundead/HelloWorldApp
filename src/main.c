@@ -2,16 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include "hello-world.h"
 
 int main(int argc, const char *argv)
 {
-    float valueOne;
-    float valueTwo;
-    char operator;
+    hello_world();
+
+    float valueOne = 4.5;
+    float valueTwo = 3;
+    char operator = '^';
     float answer;
 
-    printf("Enter calculation:\n\n");
-    scanf("%f %c %f", &valueOne, &operator, & valueTwo);
+    // printf("Enter calculation:\n\n");
+    // scanf("%f %c %f", &valueOne, &operator, & valueTwo);
 
     switch (operator)
     {
