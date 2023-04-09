@@ -215,7 +215,7 @@ void test_str_cat(void)
 
 	assert(str_cat(&s, str_lit("AAA"), str_lit("BBB"), str_lit("CCC")) == 0);
 
-	assert(str_eq(s, str_lit("AAABBBCCC")));
+	assert(str_eq(s, str_lit("AAABBBCCCC")));
 	assert(str_is_owner(s));
 	assert(*str_end(s) == 0);
 
